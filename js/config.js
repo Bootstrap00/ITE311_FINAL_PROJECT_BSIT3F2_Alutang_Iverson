@@ -1,0 +1,1 @@
+const DIRECTUS_URL = "http://localhost:8055";
