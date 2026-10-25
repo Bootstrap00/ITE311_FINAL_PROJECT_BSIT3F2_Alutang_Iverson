@@ -1,6 +1,6 @@
 # FleetCare: A Multi-Tier Web-Based Mechanic and Roadside Assistance Platform
 
-**Student Name:** Sanlier Rod S. Mahaguay
+**Student Name:** Iverson S. Alutang
 
 
 **Course and Section:** Web System and Technologies 2 – BSIT 3 F2
