@@ -32,3 +32,43 @@ input {
 }
 a { color: var(--accent-2); text-decoration: none; }
 .message { min-height: 1.2rem; font-size: .85rem; color: var(--danger); margin: 0; }
+
+/* ---------- Animations ---------- */
+.auth-card { animation: cardIn .7s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(30px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+body { background-size: 200% 200%; animation: bgShift 12s ease-in-out infinite alternate; }
+@keyframes bgShift { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
+
+/* pulsing emergency beacon behind the logo */
+h1 { position: relative; }
+h1::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent); transform: translate(-50%, -50%);
+  z-index: -1; animation: beacon 2s ease-out infinite;
+}
+@keyframes beacon {
+  0%   { box-shadow: 0 0 0 0 rgba(255,122,0,.6); }
+  100% { box-shadow: 0 0 0 70px rgba(255,122,0,0); }
+}
+
+input { transition: border-color .25s, box-shadow .25s; }
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,122,0,.25); }
+
+.btn { transition: transform .2s, box-shadow .2s, filter .2s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,122,0,.4); filter: brightness(1.08); }
+.btn:active { transform: scale(.97); }
+
+.auth-card form > * { animation: fieldIn .5s ease both; }
+.auth-card form > *:nth-child(1) { animation-delay: .15s; }
+.auth-card form > *:nth-child(2) { animation-delay: .22s; }
+.auth-card form > *:nth-child(3) { animation-delay: .29s; }
+.auth-card form > *:nth-child(4) { animation-delay: .36s; }
+.auth-card form > *:nth-child(5) { animation-delay: .43s; }
+@keyframes fieldIn { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
