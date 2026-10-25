@@ -3,25 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FleetCare | Login</title>
+  <title>FleetCare | Log in</title>
   <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <main class="auth-card">
-    <h1>Fleet<span>Care</span></h1>
-    <p class="tagline">Roadside help, on the way.</p>
-    <form id="loginForm">
-      <label for="email">Email</label>
-      <input type="email" id="email" required>
-      <label for="password">Password</label>
-      <input type="password" id="password" required>
-      <p id="message" class="message"></p>
-      <button type="submit" class="btn">Log In</button>
-    </form>
-    <p class="switch">No account yet? <a href="signup.html">Sign up</a></p>
-  </main>
+  <div class="auth-layout">
+    <aside class="brand-panel">
+      <p class="logo">Fleet<span>Care</span></p>
+      <h2>Stranded? A mechanic is already on the way.</h2>
+      <p>Pin your breakdown location, call for help, and follow your mechanic to you in real time.</p>
+      <ul class="features">
+        <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Share your exact location on the map</li>
+        <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg></span>Get matched with certified mobile mechanics</li>
+        <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span>Pay securely once the job is done</li>
+      </ul>
+      <div class="radar" aria-hidden="true"></div>
+    </aside>
+
+    <main class="auth-side">
+      <section class="auth-card">
+        <h1>Welcome back</h1>
+        <p class="tagline">Log in to request or manage roadside help.</p>
+        <form id="loginForm">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required>
+              <button type="button" class="toggle" aria-label="Show or hide password">Show</button>
+            </div>
+          </div>
+          <p id="message" class="message" role="status"></p>
+          <button type="submit" class="btn">Log in</button>
+        </form>
+        <p class="switch">New to FleetCare? <a href="signup.html">Create an account</a></p>
+      </section>
+    </main>
+  </div>
   <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
   <script src="js/login.js"></script>
 </body>
 </html>
