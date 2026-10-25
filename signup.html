@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FleetCare | Sign Up</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <main class="auth-card">
+    <h1>Fleet<span>Care</span></h1>
+    <p class="tagline">Create your account</p>
+    <form id="signupForm">
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" required>
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" minlength="8" required>
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" required>
+      <p id="message" class="message"></p>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p class="switch">Already registered? <a href="login.html">Log in</a></p>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
