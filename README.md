@@ -1,7 +1,7 @@
 # FleetCare: A Multi-Tier Web-Based Mechanic and Roadside Assistance Platform
 
-**Student Name:** Your Full Name
-**Course and Section:** Web System and Technologies 2 – BSIT (Section ___)
+**Student Name:** Sanlier Rod S. Mahaguay
+**Course and Section:** Web System and Technologies 2 – BSIT 3 F2
 
 ## Project Description
 FleetCare is a web-based automotive emergency platform powered by Directus CMS
